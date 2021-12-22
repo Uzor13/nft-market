@@ -24,10 +24,12 @@ const Featured = ({nfts}) => {
                     return (
                         <Fragment key={id}>
                             <Card img={nftImage.url}
-                                  creator={creator.name}
-                                  price={nftPrice}
+                                  creator={`@${creator.name}`}
+                                  price={`${nftPrice} ETH`}
                                   name={nft_name}
-                                  current_bid={currentBid}/>
+                                  current_bid={currentBid}
+                                  text="Place a bid"
+                            />
                         </Fragment>
                     )
                 })}

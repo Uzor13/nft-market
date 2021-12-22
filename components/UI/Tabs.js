@@ -1,16 +1,13 @@
 import React from 'react';
 
-const Tabs = ({data}) => {
-
-    const sports = data.filter(sport => sport.tags === "sports")
-    console.log(sports)
-
+const Tabs = ({input, setInput}) => {
+    console.log(input)
     return (
         <div className="tab">
-            <button>Art</button>
-            <button className="active">Sports</button>
-            <button>Photography</button>
-            <button>Pattern</button>
+            <button onClick={() => setInput("art")}>Art</button>
+            <button onClick={() => setInput("sports")} className="active">Sports</button>
+            <button onClick={() => setInput("photography")}>Photography</button>
+            <button onClick={() => setInput("pattern")}>Pattern</button>
         </div>
     );
 };
